@@ -1,4 +1,8 @@
 import React from "react";
+import { CiCloudSun } from "react-icons/ci";
+import { FaLocationDot } from "react-icons/fa6";
+import { MdMyLocation } from "react-icons/md";
+import SearchBox from "./SearchBox";
 
 type Props = {}
 
@@ -9,7 +13,18 @@ export default function Navbar({}:Props){
         mx-auto">
             <p className="flex items-center justify=center gap-2 ">
                 <h2 className="text-gray-500 text-3xl">Weather</h2>
+                <CiCloudSun className="text-3xl mt-1 text-yellow-300" />
             </p>
+            {/* */}
+            <section className="flex gap-2 items-center">
+                <MdMyLocation className="text-2xl text-gray-400 hover:opacity-80 cursor-pointer"/>
+                <FaLocationDot className=" text-2xl "/>
+                
+                <p className="text-slate-900/80 text-sm"> Location </p>
+                <div>  
+                    <SearchBox />
+                </div>
+            </section>
         </div>
         </nav>
     );
